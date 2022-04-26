@@ -16,13 +16,13 @@
         <h1></h1>
         <nav>
           <ul id="gnb">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Value</a></li>
-            <li><a href="#">How to use</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li class="on"><a href="#first">About</a></li>
+            <li><a href="#second">Value</a></li>
+            <li><a href="#third">How to use</a></li>
+            <li><a href="#fourth">Service</a></li>
+            <li><a href="#fifth">News</a></li>
+            <li><a href="#sixth">FAQ</a></li>
+            <li><a href="#footer">Contact us</a></li>
           </ul>
         </nav>
         <div class="btn-box">
@@ -84,7 +84,7 @@
         </div>
       </section>
       <!-- 첫번째 섹션 -->
-      <section class="mov about">
+      <section class="mov about" id="first">
         <div class="inner">
           <h2 class="ani title" id="sec01">About</h2>
           <div class="row">
@@ -129,10 +129,10 @@
         </div>
       </section>
       <!-- 두번째 섹션 -->
-      <section class="mov value">
+      <section class="mov value" id="second">
         <div class="inner">
-          <h2 class="ani-title" id="sec02">Value</h2>
-          <h3>
+          <h2 class="ani title" id="sec02">Value</h2>
+          <h3 class="ani">
             <b>당신의 이동에</b><br>가치를 더 합니다.
           </h3>
           <ul>
@@ -173,16 +173,16 @@
         </div>
       </section>
       <!-- 세번째 섹션 -->
-      <section class="mov howtouse">
+      <section class="mov howtouse" id="third">
         <div class="inner">
           <h2 class="ani title" id="sec03">How to use</h2>
-          <div class="htu-slider-ani">
+          <div class="htu-slider-wrapper ani">
             <h3>
               <b>글로벌 모빌리티 플랫폼, 무브</b>
               <br>프라이빗 이동의<br>시작과 끝을<br>무브와 함께 하세요
             </h3>
-            <ul>
-              <li>
+            <ul class="slider">
+              <li class="on">
                 <div class="img-box">
                   <img src="./img/sec_HowToUse/use_1.png" alt="이미지">
                 </div>
@@ -233,15 +233,15 @@
         </div>
       </section>
       <!-- 네번째 섹션 -->
-      <section class="mov service">
+      <section class="mov service" id="fourth">
         <div class="inner">
           <h2 class="ani title" id="sec04">Service</h2>
           <h3 class="ani">
             <b>이동도 여행처럼</b>
             <br>이동의 새로운 기준, 무브
           </h3>
-          <div class="service-tap-wrap ani">
-            <ul>
+          <div class="service-tap-wrapper ani">
+            <ul class="service-tap">
               <li class="active"><a>공항이동</a></li>
               <li><a>자유여행</a></li>
               <li><a>무브골프</a></li>
@@ -252,7 +252,7 @@
           </div>
           <a class="left-btn" title="이전 버튼"></a>
           <a class="right-btn" title="다음 버튼"></a>
-          <div class="tap-service-wrap ani">
+          <div class="tap-service-wrapper ani">
             <div id="tab_1" class="tab-service">
               <div class="right-box">
                 <a>
@@ -271,11 +271,11 @@
         </div>
       </section>
       <!-- 다섯번째 섹션 -->
-      <section class="mov news">
+      <section class="mov news" id="fifth">
         <div class="inner">
           <h2 class="ani title" id="sec05">News</h2>
-          <div class="news-slider-wrap ani">
-            <ul>
+          <div class="news-slider-wrapper ani">
+            <ul class="swiper-wrapper">
               <li>
                 <a href="https://mirakle.mk.co.kr/view.php?year=2022&no=227557" target="_blank" rel="noreferrer">
                   <div class="press">
@@ -344,7 +344,7 @@
               </li>
             </ul>
             <div class="swiper">
-              <span></span>
+              <span class="active"></span>
               <span></span>
               <span></span>
               <span></span>
@@ -355,7 +355,7 @@
         </div>
       </section>
       <!-- 여섯번째 섹션 -->
-      <section class="mov faq">
+      <section class="mov faq" id="sixth">
         <div class="inner">
           <h2 class="ani title" id="sec06">FAQ</h2>
           <ul class="faq-tab ani">
@@ -363,12 +363,12 @@
             <li><a>차량이용</a></li>
             <li><a>추가요금 및 보험 외</a></li>
           </ul>
-          <div class="faq-tab-wrap ani">
-            <div id="tab-faq-1">
+          <div class="faq-tab-wrapper ani">
+            <div id="tab-faq-1" class="faq-con">
               <ul class="faq-list">
-                <li>
+                <li class="on">
                   <a>언제까지 예약해야 하나요?</a>
-                  <p>원활한 배차를 위해 이용일로부터 3~4일 전까지는 예약하시기를 권장합니다. 주말이나 성수기의 ㄱ여우 전 차량이 일찍 마감되는 경우가
+                  <p>원활한 배차를 위해 이용일로부터 3~4일 전까지는 예약하시기를 권장합니다. 주말이나 성수기의 경우 전 차량이 일찍 마감되는 경우가
                   있으니 예약을 조금 더 서둘러 주시는 것이 좋습니다.</p>
                 </li>
                 <li>
@@ -377,7 +377,7 @@
                   있습니다. 결제 전 반드시 고객센터에 가능 여부를 먼저 확인해 주세요.</p>
                 </li>
                 <li>
-                  <a>편도 이용도 가능한가오?</a>
+                  <a>편도 이용도 가능한가요?</a>
                   <p>네. 편도 이용도 가능합니다.</p>
                 </li>
               </ul>
@@ -386,7 +386,7 @@
         </div>
       </section>
       <!-- 일곱번째 섹션 -->
-      <section class="mov contactUs">
+      <section class="mov vehicle" id="seventh">
         <div>
           <div class="inner">
             <h2>편안하고 안전한 이동,<br>이동의 순간을 더 가치있게</h2>
@@ -395,8 +395,8 @@
               <span class="space">, </span>
               <br>무브의 시작은 고객을 향한 진심에서 출발합니다.
             </h3>
-            <a target="_blank" rel="noreferrer" class="btn-app google"></a>
-            <a target="_blank" rel="noreferrer" class="btn-app apple"></a>
+            <a target="_blank" rel="noreferrer" class="btn-app google">GOOGLE STORE</a>
+            <a target="_blank" rel="noreferrer" class="btn-app apple">APPLE STORE</a>
           </div>
         </div>
       </section>
@@ -413,7 +413,7 @@
               <dt>전화</dt>
               <dd>1877-2025</dd>
               <dt>이메일</dt>
-              <dd><a>offic@#movvcorp.com</a></dd>
+              <dd><a>offic@movvcorp.com</a></dd>
             </dl>
           </div>
           <div class="menu">
@@ -443,11 +443,11 @@
         </div>
         <address>
           <h2>&copy;movvcorp</h2>
-          <sapn>(주)무브</sapn>
-          <sapn>대표 최민석</sapn>
-          <sapn>사업자등록번호 391-87-00213</sapn>
-          <sapn>통신판매업신고번호 2020-서울마포-2271호 </sapn>
-          <sapn>서울시 마포구 백범로31길 21, 서울창업허브 본관 517호 (공덕동)</sapn>
+          <span>(주)무브</span>
+          <span>대표 최민석</span>
+          <span>사업자등록번호 000-00-00000</span>
+          <span>통신판매업신고번호 0000-서울마포-0000호</span>
+          <span>서울시 마포구 백범로31길 21, 서울창업허브 본관 000호 (공덕동)</span>
         </address>
       </div>
     </footer>
