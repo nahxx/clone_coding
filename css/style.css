@@ -74,21 +74,6 @@ header.fixed h1 {
   top: 40px;
   background-image: url('../img/logo_b.png');
 }
-header.fixed #gnb li a {
-  font-weight: 600;
-  color: #090d2b;
-}
-header.fixed #gnb > li.on:before {
-  content: '';
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -10px;
-  left: calc(50% - 3px);
-  background: #1ecc8f;
-}
 header.fixed a.btn-app {
   border-color: #c6c9e0;
   color: #121212;
@@ -124,6 +109,33 @@ header nav ul li a {
   font-size: 16px;
   font-weight: 600;
   color: rgba(255, 255, 255, .7);
+}
+header.fixed #gnb li a {
+  font-weight: 600;
+  color: #090d2b;
+}
+header.fixed #gnb li {
+  position: relative;
+}
+header.fixed #gnb li.on a {
+  color: #1ecc8f;
+}
+header.fixed #gnb li:nth-of-type(3).on a {
+  color: #16c3d9;
+}
+header.fixed #gnb li:nth-of-type(5).on a {
+  color: #fcc22b;
+}
+header.fixed #gnb li.on:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 3px);
+  background-color: #1ecc8f;
 }
 header .btn-box {
   position: absolute;
@@ -533,6 +545,10 @@ a.btn-app.apple:before {
   position: relative;
   letter-spacing: 0;
   margin-bottom: 105px;
+  opacity: 0;
+}
+.mov .inner h2.ani {
+  opacity: 1;
 }
 .mov .inner h2:before {
   content: '';
@@ -949,7 +965,67 @@ ul.service-tap {
 .service .tab-service .right-box a .thum img {
   width: 100%;
 }
-
+.service .tab-service .right-box .buttons-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.service .tab-service .right-box .buttons-box .btn {
+  display: block;
+  min-width: 180px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  line-height: 43px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 19px;
+  font-weight: 600;
+  text-align: left;
+  padding: 0 40px 0 20px;
+  transition: all .25s ease;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+.service .tab-service .right-box .buttons-box .btn.arr {
+  background-image: url('../img/sec_service/golf_arr.png');
+}
+.service .tab-service .right-box .buttons-box .btn.play {
+  background-image: url('../img/sec_service/golf_play.png');
+  margin-bottom: 0;
+}
+.service .tab-service .right-box .youtube {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+}
+.service .tab-service .right-box .youtube span {
+  display: inline-block;
+}
+.service .tab-service .right-box .youtube .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-image: url('../img/sec_service/ktx_hosp_play.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 5px;
+}
+.service .tab-service .right-box .youtube .txt {
+  font-size: 19px;
+  color: #fff;
+  font-weight: 600;
+}
+.service .tab-service .right-box .youtube .txt em {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
 .service .tab-service .txt-box {
   float: left;
   width: calc(100% - 55.08%);
@@ -1112,6 +1188,11 @@ ul.service-tap {
 .faq .faq-tab li.active a {
   font-weight: 600;
 }
+.faq .faq-tab:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .faq .faq-tab li.active a:before {
   content: '';
   display: block;
@@ -1122,12 +1203,6 @@ ul.service-tap {
   height: 5px;
   background: #2feca9;
 }
-.faq .faq-tab:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .faq .faq-tab-wrapper {
   transition: all 1s ease;
   transition-delay: .1s;
