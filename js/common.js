@@ -16,7 +16,6 @@ $(function() {
     // ani 반응 영역
     $('.mov').each(function() {
       let thisOffset = $(this).offset();
-      console.log(thisOffset);
       if(scrTop >= thisOffset.top - 300 && scrTop < thisOffset.top + winHeight) {
         $('#gnb li').removeClass('on');
         $('#gnb').find(`li:nth-of-type(${$(this).index() - 1})`).addClass('on');
