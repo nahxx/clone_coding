@@ -64,7 +64,6 @@ header {
   z-index: 105;
   text-align: center;
   padding-bottom: 30px;
-  display: relative;
   transition: all .25s ease;
 }
 header.fixed {
@@ -244,18 +243,33 @@ a.btn-app.apple:before {
 }
 .main-banner .car-box .info dl {
   float: left;
-  transform-origin: bottom left;
-  width: 33%;
+  overflow:hidden;
+  height: 0;
+  margin-left: 5%;
   position: relative;
-  margin-left: 33px;
+  transform-origin: bottom left;
+}
+@keyframes info_ani {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
 }
 .main-banner .car-box .info dl:first-child {
+  animation: info_ani 1s 1.5s ease-out forwards;
   margin-left: 0;
+  width: 33%;
 }
 .main-banner .car-box .info dl:nth-child(2) {
+  animation: info_ani 1.4s 2.3s ease-out forwards;
   width: 26%;
 }
 .main-banner .car-box .info dl:nth-child(3) {
+  animation: info_ani 1.4s 3.1s ease-out forwards;
   width: 31%;
 }
 .main-banner .car-box .info dl:before {
@@ -291,6 +305,8 @@ a.btn-app.apple:before {
   background-image: url('../img/car/car.png');
   background-repeat: no-repeat;
   background-position: left top;
+  left: 500px;
+  opacity: .3;
   position: relative;
   z-index: 10;
 }
@@ -533,7 +549,9 @@ a.btn-app.apple:before {
 .mov .inner h2.ani:before {
   width: 100%;
 }
-
+.mov:last-child .inner h2:before {
+  display: none;
+}
 .about .inner .row {
   width: 100%;
   margin-bottom: 190px;
@@ -543,8 +561,8 @@ a.btn-app.apple:before {
   float: left;
   width: calc(100% - 800px);
   transition: all 1.2s ease;
-  /* opacity: 0; */
-  /* transform: translate(-200px, 0); */
+  opacity: 0;
+  transform: translate(-200px, 0);
   animation: none;
 }
 .about .inner .row .txt-box.ani {
@@ -572,7 +590,7 @@ a.btn-app.apple:before {
   width: 730px;
   transition: all 1.2s .8s ease;
   opacity: 0;
-  /* transform: translate(200px, 0); */
+  transform: translate(200px, 0);
   animation: none;
 }
 .about .row .img-box.ani {
@@ -631,8 +649,8 @@ a.btn-app.apple:before {
   margin-left: 4%;
   width: 30.6%;
   transition: all 1.2s ease;
-  /* opacity: 0; */
-  /* transform: translate(0, 200px); */
+  opacity: 0;
+  transform: translate(0, 200px);
   animation: none;
 }
 .value .inner ul li.ani {
@@ -671,7 +689,7 @@ a.btn-app.apple:before {
   display: block;
   width: calc(100% + 50%);
   height: 400px;
-  background: #090d3b;
+  background: #090d2b;
   position: absolute;
   left: 50%;
   top: calc(100% -20%);
@@ -697,7 +715,7 @@ a.btn-app.apple:before {
   padding-top: 1px;
   transition: all 1s ease;
   overflow: hidden;
-  /* transform: translate(0, 200px); */
+  transform: translate(0, 200px);
 }
 .howtouse .inner .htu-slider-wrapper.ani {
   transform: translate(0, 0);
@@ -895,12 +913,12 @@ ul.service-tap {
   background-position: 50% 20px;
 }
 
-.service .tab-service-wrapper {
+.service .tap-service-wrapper {
   transition: all 1s ease;
   transform: translate(0, 130px);
   opacity: 0;
 }
-.service .tab-service-wrapper.ani {
+.service .tap-service-wrapper.ani {
   transform: translate(0, 0);
   opacity: 1;
 }
@@ -984,10 +1002,14 @@ ul.service-tap {
   height: 100%;
   padding-bottom: 95px;
   z-index: 1;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   box-sizing: content-box;
   overflow: hidden;
+  display: none;
+}
+.news .news-slider-wrapper ul.swiper-wrapper.on {
+  display: flex;
 }
 .news .news-slider-wrapper ul li {
   float: left;
@@ -1002,6 +1024,9 @@ ul.service-tap {
 .news .news-slider-wrapper ul li a {
   display: block;
   overflow: hidden;
+}
+.news .news-slider-wrapper ul li a:hover .press img {
+  transform: scale(1.1);
 }
 .news .news-slider-wrapper ul li a .press {
   float: left;
@@ -1105,6 +1130,7 @@ ul.service-tap {
 
 .faq .faq-tab-wrapper {
   transition: all 1s ease;
+  transition-delay: .1s;
   transform: translate(0, 200px);
 }
 .faq .faq-tab-wrapper.ani {
