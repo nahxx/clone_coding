@@ -135,7 +135,7 @@ header.fixed #gnb li:nth-of-type(5).on a {
   color: #fcc22b;
 }
 header.fixed #gnb li:nth-of-type(7).on a {
-  color: #090deb;
+  color: #090d2b;
 }
 header.fixed #gnb li.on::before {
   content: '';
