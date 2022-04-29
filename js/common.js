@@ -109,9 +109,12 @@ $(function() {
 
   // 여섯번째 섹션(faq)의 li에 on클래스 추가(정적)
   $('.faq-list li').click(function() {
+    /*
     $('.faq-list li').removeClass('on');
     $(this).addClass('on');
-    // $(this).toggleClass('on');
+    */
+    $('.faq-list li').not($(this)).removeClass('on'); // click시 해당 요소 외 다른 요소의 클래스가 삭제됨
+    $(this).toggleClass('on');// 해당 요소 한번 더 클릭시 삭제 됨
   });
 
   // 여섯번째 섹션(faq)의 .faq-tab-wrapper 새로 추가하기
@@ -131,8 +134,8 @@ $(function() {
 
     // 여섯번째 섹션(faq)의 li에 on클래스 추가(동적)
     $('.faq-list').on('click', 'li', function() { // .faq-list의 li를 클릭했을 때
-      $('.faq-list li').removeClass('on'); // 모든 li의 'on'클래스를 지우고
-      $(this).addClass('on'); // 해당 li에만 'on'클래스를 추가해준다.
+      $('.faq-list li').not($(this)).removeClass('on'); // 모든 li의 'on'클래스를 지우고
+      $(this).toggleClass('on'); // 해당 li에만 'on'클래스를 추가해준다.
     });
   });
 });
