@@ -1115,6 +1115,7 @@ ul.service-tap {
   box-sizing: content-box;
   overflow: hidden;
   display: none;
+  animation: opacityAni 1s;
 }
 .news .news-slider-wrapper ul.swiper-wrapper.on {
   display: flex;
