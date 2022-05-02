@@ -90,10 +90,11 @@
       </li>
     </ol>
   </li>
-  <li>
+  <li>(22/05/02)
     <ol>
       <li>headr와 footer를 따로 html파일로 만든 후 자바스크립트로 파일을 load하였다.</li>
       <li>css에서 미디어쿼리 적용하기 시작했다.</li>
+      <li>howtouse섹션과 service섹션의 좌우 slide를 구현할 함수를 생성한 뒤 호출하여 좌우 버튼을 누르면 노출되는 요소가 바뀌도록 만들었다.</li>
     </ol>
   </li>
 </ul>
