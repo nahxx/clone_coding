@@ -90,4 +90,10 @@
       </li>
     </ol>
   </li>
+  <li>
+    <ol>
+      <li>headr와 footer를 따로 html파일로 만든 후 자바스크립트로 파일을 load하였다.</li>
+      <li>css에서 미디어쿼리 적용하기 시작했다.</li>
+    </ol>
+  </li>
 </ul>

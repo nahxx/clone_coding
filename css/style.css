@@ -1478,3 +1478,36 @@ footer address span {
   margin-left: 15px;
   color: #fff;
 }
+
+/* 미디어쿼리 영역 */
+
+@media screen and (max-width: 1650px) {
+  header {
+    padding-bottom: 25px;
+  }
+  header h1 {
+    width: 220px;
+    height: 28px;
+    left: 20px;
+    top: 20px;
+  }
+  header nav {
+    top: 30px;
+    left: 400px;
+  }
+  header .btn-box {
+    right: 20px;
+    top: 15px;
+  }
+  header a.btn-app {
+    width: 136px;
+    height: 45px;
+    padding-left: 35px;
+    font-size: 12px;
+    line-height: 43px;
+  }
+  header a.btn-app:before {
+    left: 10px;
+    top: 11px;
+  }
+}

@@ -1,6 +1,10 @@
 $(function() {
   // script 영역
 
+  // 헤더, 푸터 파일 load
+  $('header').load('./header.html');
+  $('footer').load('./footer.html .inner');
+
   // scroll 반응 영역
   $(window).scroll(function() {
     let winHeight = $(window).height();
