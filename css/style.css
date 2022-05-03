@@ -94,9 +94,13 @@ header h1 {
 
 header nav {
   display: inline-block;
-  position: absolute;
+  /* position: absolute;
   top: 47px;
-  left: 460px;
+  left: 500px; */
+  margin: 0 auto;
+  margin-top: 40px;
+  line-height: 80px;
+  vertical-align: middle;
 }
 header nav #gnb li {
   float: left;
