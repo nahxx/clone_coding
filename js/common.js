@@ -110,19 +110,19 @@ $(function() {
   let btnLeft = $('.htu-slider-wrapper .left-btn');
   let thisElem = $(`.slider`);
   let findElem = 'li';
-  btnSlideFunc(btnRight, thisElem, findElem, 1);
-  btnSlideFunc(btnLeft, thisElem, findElem, -1);
+  btnSlideFunc(btnRight, 1);
+  btnSlideFunc(btnLeft, -1);
   // 버튼 슬라이드 함수 구현
-  function btnSlideFunc(btnName, elem, findElem, checkIdx) {
+  function btnSlideFunc(btnName, checkIdx) {
     btnName.click(function() {
       idx += 1 * checkIdx;
-      elem.find(findElem).removeClass('on');
-      if(idx == elem.find(findElem).length + 1) {
+      thisElem.find(findElem).removeClass('on');
+      if(idx == thisElem.find(findElem).length + 1) {
         idx = 1;
       } else if(idx == 0) {
-        idx = elem.find(findElem).length;
+        idx = thisElem.find(findElem).length;
       }
-      $(elem).find(`${findElem}:nth-child(${idx})`).addClass('on');
+      $(thisElem).find(`${findElem}:nth-child(${idx})`).addClass('on');
     });
   };
 
@@ -162,18 +162,18 @@ $(function() {
   let lBtn = '.left-btn';
   let thisUl = $('.service-tap');
   let elemFind = 'li';
-  slideBtnFunc(thisId, rBtn, thisUl, elemFind, 1);
-  slideBtnFunc(thisId, lBtn, thisUl, elemFind, -1);
-  function slideBtnFunc(thisId, btnName, thisUl, findElem, checkIdx) {
+  slideBtnFunc(rBtn, 1);
+  slideBtnFunc(lBtn,-1);
+  function slideBtnFunc(btnName, checkIdx) {
     $(thisId).on('click', btnName, function() {
       thisIdx += 1 * checkIdx;
-      $(thisUl).find(findElem).removeClass('active');
-      if(thisIdx == $(thisUl).find(findElem).length + 1) {
+      $(thisUl).find(elemFind).removeClass('active');
+      if(thisIdx == $(thisUl).find(elemFind).length + 1) {
         thisIdx = 1;
       } else if(thisIdx == 0) {
-        thisIdx = $(thisUl).find(findElem).length;
+        thisIdx = $(thisUl).find(elemFind).length;
       }
-      $(thisUl).find(`${findElem}:nth-child(${thisIdx})`).addClass('active');
+      $(thisUl).find(`${elemFind}:nth-child(${thisIdx})`).addClass('active');
       $('.tap-service-wrapper').html($(tapService[thisIdx - 1]));
     });
   }
