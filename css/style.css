@@ -1386,6 +1386,9 @@ ul.service-tap {
 .vehicle .inner a.btn-app.apple {
   padding-left: 55px;
 }
+.vehicle .inner a.btn-app.apple:before {
+  left: 18px;
+}
 
 /* 푸터 영역 */
 footer {
