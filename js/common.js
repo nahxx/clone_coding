@@ -128,15 +128,15 @@ $(function() {
 
   // 네번째 섹션(service)의 click 반응 구현
   let tapService = ['<div id="tab_1" class="tab-service"><div class="right-box"><a><span class="thum"><img src="./img/sec_service/airport.png" alt="이미지"></span></a></div><div class="txt-box"><p class="sbj">공항이동</p><p>자택에서 공항까지 공항에서 목적지까지<br>공항이동도 편안하게, 무브</p><a target="_blank" rel="noreferrer">예약 바로 가기 →</a></div></div>', '<div id="tab_2" class="tab-service"><div class="right-box"><a><span class="thum"><img src="./img/sec_service/free.png" alt="이미지"></span></a></div><div class="txt-box"><p class="sbj">자유여행</p><p>원하는 곳 어디든지 전용기사 전용차량으로<br>우리끼리 프라이빗하게 우리만의 특별한 자유여행, 무브</p><a target="_blank" rel="noreferrer">예약 바로 가기 →</a></div></div>', '<div id="tab_3" class="tab-service"><div class="right-box"><div class="buttons-box"><a class="btn arr" target="blank">무브 골프 소개</a><a class="btn play" target="blank">무브 골프 CF <em>15s</em></a></div><span class="thumn"><img src="./img/sec_service/golf.png" alt="이미지"></span></div><div class="txt-box"><p class="sbj">무브골프</p><p>편안한 라운딩 &amp; 일행 모두 즐기는 골프모임을 위해<br>골프장 갈 땐, 프라이빗 이동 서비스, 무브</p><a target="_blank" rel="noreferrer">예약 바로 가기 →</a></div></div>', '<div id="tab_4" class="tab-service"><div class="right-box"><a><span class="thum"><img src="./img/sec_service/business.png" alt="이미지"></span></a></div><div class="txt-box"><p class="sbj">무브비즈니스</p><p>임직원 출장 · VIP의전 서비스 넓고 쾌적한 차량으로 편안하게<br>성공 비즈니스를 이어주는 스마트 모빌리티, 무브</p><a target="_blank" rel="noreferrer">홈페이지 바로 가기 →</a></div></div>', '<div id="tab_5" class="tab-service"><div class="right-box"><a href="https://www.youtube.com/watch?v=6PABLwwid8E" target="blank"><div class="youtube"><span class="icon"></span><div class="txt">무브KTX CF <em>20s</em></div></div><span class="thum"><img src="./img/sec_service/ktx.png" alt="이미지"></span></a></div><div class="txt-box"><p class="sbj">무브KTX</p><p>KTX 예약도 무브에서 한 번에 편리하게<br>최대 50% 무브만의 할인 혜택까지<br>KTX 탈 땐, 무브 하세요</p><a target="_blank" rel="noreferrer">예약 바로 가기 →</a></div></div>', '<div id="tab_6" class="tab-service"><div class="right-box"><a href="https://www.youtube.com/watch?v=i9M6vrwq6F8" target="blank"><div class="youtube"><span class="icon"></span><div class="txt">병원이동 CF <em>20s</em></div></div><span class="thum"><img src="./img/sec_service/hospital.png" alt="이미지"></span></a></div><div class="txt-box"><p class="sbj">병원이동</p><p>전용기사/전용차량으로 운전 걱정없이<br>병원까지 편안하고 안전하게<br>병원갈 땐 무브하세요</p><a target="_blank" rel="noreferrer" href="https://movv.co/meta/hospital">예약 바로 가기 →</a></div></div>'];
+  let thisIdx = 0;
   $('.service-tap').on('click', 'li', function() {
-    let thisIdx = $(this).index();
+    thisIdx = $(this).index();
     $('.service-tap li').removeClass('active');
     $(this).addClass('active');
-    $('.tap-service-wrapper').html($(tapService[thisIdx]));
+    $('.tap-service-wrapper').html($(tapService[thisIdx++]));
   });
 
   // 네번째 섹션(service)의 슬라이드 반응 구현
-  let thisIdx = 1;
   // 바로 on메서드 사용하여 btn각각 이벤트 적용
   // $('#fourth').on('click', '.right-btn', function() {
   //   thisIdx++;
@@ -178,14 +178,24 @@ $(function() {
     });
   }
 
-
   // 다섯번째 섹션(news)의 on클래스 추가(뉴스 display)
+  // $('.swiper span').click(function() {
+  //   $('.swiper span').removeClass('active');
+  //   $(this).addClass('active');
+  //   $('.swiper-wrapper').removeClass('on');
+  //   $('.swiper-wrapper').eq($(this).index()).addClass('on');
+  // });
+
+  // 다섯번째 섹션(news)의 slide 영역 (위코드를 슬라이드버전으로 바꿈)
+  let elWidth = $('.news-slider-wrapper').css('width');
+  let marginLeft = 1180;
   $('.swiper span').click(function() {
     $('.swiper span').removeClass('active');
     $(this).addClass('active');
-    $('.swiper-wrapper').removeClass('on');
-    $('.swiper-wrapper').eq($(this).index()).addClass('on');
-  });
+    $('.news-slider-wrapper').animate({left: -(marginLeft * $(this).index())}, 50, 'swing');
+  })
+
+
 
   // 다섯번째 섹션(news)의 .sbj의 글자수 체크 영역(ellipsis)
   $('.sbj').each(function() {
