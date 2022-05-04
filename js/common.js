@@ -136,6 +136,7 @@ $(function() {
       $(this).addClass('active');
       $('.tap-service-wrapper').html($(tapService[thisIdx++]));
     });
+    return thisIdx;
   }
   serviceTapOn();
 
