@@ -191,15 +191,14 @@ $(function() {
   // });
 
   // 다섯번째 섹션(news)의 slide 영역 (위코드를 슬라이드버전으로 바꿈)
-  let elWidth = $('.news-slider-wrapper').css('width');
-  let marginLeft = 1180;
+  // let elWidth = $('.news-slider-wrapper').css('width');
+  // let marginLeft = 1180;
+  let marginLeft = parseInt($('ul.swiper-wrapper').css('width')); // 1180
   $('.swiper span').click(function() {
     $('.swiper span').removeClass('active');
     $(this).addClass('active');
     $('.news-slider-wrapper').animate({left: -(marginLeft * $(this).index())}, 50, 'swing');
-  })
-
-
+  });
 
   // 다섯번째 섹션(news)의 .sbj의 글자수 체크 영역(ellipsis)
   $('.sbj').each(function() {
