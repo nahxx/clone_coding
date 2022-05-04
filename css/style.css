@@ -1346,6 +1346,7 @@ ul.service-tap {
   background: #f7f7f8;
   position: relative;
   min-height: 130px;
+  /* height: 160px; */
   font-size: 19px;
   color: #6c7090;
   word-break: keep-all;

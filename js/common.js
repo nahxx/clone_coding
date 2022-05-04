@@ -211,7 +211,7 @@ $(function() {
     }
   });
 
-  // 여섯번째 섹션(faq)의 li에 on클래스 추가(정적)
+  // 여섯번째 섹션(faq)의 li에 on클래스 추가(정적) : display none, class on, min-height: 130px
   $('.faq-list li').click(function() {
     /*
     $('.faq-list li').removeClass('on');
@@ -220,6 +220,20 @@ $(function() {
     $('.faq-list li').not($(this)).removeClass('on'); // click시 해당 요소 외 다른 요소의 클래스가 삭제됨
     $(this).toggleClass('on');// 해당 요소 한번 더 클릭시 삭제 됨
   });
+
+  // slide 버전 : height: 160px
+  // $('.faq-list li a').click(function() {
+  //   let isAni = $('.faq-list li p').is(':animated');
+  //   if(!isAni) {
+  //     if($('+p', this).css('display') == 'none') {
+  //       $('.faq-list li p').slideUp('slow');
+  //       $('+p', this).slideDown('slow');
+  //     } else {
+  //       $('+p', this).slideUp('slow');
+  //     }
+  //   }
+  // });
+
 
   // 여섯번째 섹션(faq)의 .faq-tab-wrapper 새로 추가하기
   let fabFaqId = [1, 2, 3];
@@ -241,5 +255,19 @@ $(function() {
       $('.faq-list li').not($(this)).removeClass('on'); // 모든 li의 'on'클래스를 지우고
       $(this).toggleClass('on'); // 해당 li에만 'on'클래스를 추가해준다.
     });
+
+    // slide 버전
+    // $('.faq-list li a').click(function() {
+    //   let isAni = $('.faq-list li p').is(':animated');
+    //   if(!isAni) {
+    //     if($('+p', this).css('display') == 'none') {
+    //       $('.faq-list li p').slideUp('slow');
+    //       $('+p', this).slideDown('slow');
+    //     } else {
+    //       $('+p', this).slideUp('slow');
+    //     }
+    //   }
+    // });
+
   });
 });
