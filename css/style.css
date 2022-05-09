@@ -1345,8 +1345,8 @@ ul.service-tap {
   padding: 30px 85px 35px;
   background: #f7f7f8;
   position: relative;
-  min-height: 130px;
-  /* height: 160px; */
+  /* min-height: 130px; */
+  height: 160px;
   font-size: 19px;
   color: #6c7090;
   word-break: keep-all;
@@ -1356,7 +1356,7 @@ ul.service-tap {
 .faq .faq-tab-wrapper .faq-con ul.faq-list li.on p {
   display: block;
 }
-.faq .faq-tab-wrapper .faq-con ul.faq-list li.on p:before {
+.faq .faq-tab-wrapper .faq-con ul.faq-list li p:before {
   content: '답변';
   width: 40px;
   height: 40px;
